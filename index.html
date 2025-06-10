@@ -61,7 +61,8 @@ document.getElementById("telegramForm").addEventListener("submit", function(e) {
     alert("Пожалуйста, заполните имя и телефон");
     return;
   }
-  const text = Заявка с сайта:%0AИмя: ${name}%0AТелефон: ${phone}%0AСообщение: ${message};
+const text = Заявка с сайта:%0AИмя: ${name}%0AТелефон: ${phone}%0AСообщение: ${message};
+
 
   fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
     method: "POST",
